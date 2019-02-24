@@ -13,7 +13,5 @@
 # limitations under the License.
 
 ifneq ($(filter sagit chiron,$(TARGET_DEVICE)),)
-
 include $(call all-subdir-makefiles)
-
 endif
