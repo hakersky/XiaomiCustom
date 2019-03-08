@@ -19,12 +19,12 @@ VENDOR_XIAOMICUSTOM := vendor/XiaomiCustom
 # Inherit MiuiCamera
 $(call inherit-product, vendor/XiaomiCustom/MiuiCamera/MiuiCamera.mk)
 
-#aptX
+# aptX
 PRODUCT_COPY_FILES += \
     $(VENDOR_XIAOMICUSTOM)/system/lib64/libaptXHD_encoder.so:system/lib64/libaptXHD_encoder.so \
     $(VENDOR_XIAOMICUSTOM)/system/lib64/libaptX_encoder.so:system/lib64/libaptX_encoder.so
 
-#Mlipay
+# Mlipay
 PRODUCT_COPY_FILES += \
     $(VENDOR_XIAOMICUSTOM)/system/lib64/vendor.xiaomi.hardware.mlipay@1.0.so:system/lib64/vendor.xiaomi.hardware.mlipay@1.0.so \
     $(VENDOR_XIAOMICUSTOM)/system/lib64/vendor.xiaomi.hardware.mlipay@1.1.so:system/lib64/vendor.xiaomi.hardware.mlipay@1.1.so \
@@ -32,4 +32,7 @@ PRODUCT_COPY_FILES += \
     $(VENDOR_XIAOMICUSTOM)/system/vendor/bin/mlipayd@1.1:$(TARGET_COPY_OUT_VENDOR)/bin/mlipayd@1.1 \
     $(VENDOR_XIAOMICUSTOM)/system/vendor/lib64/libmlipay.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmlipay.so \
     $(VENDOR_XIAOMICUSTOM)/system/vendor/lib64/libmlipay@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmlipay@1.1.so 
+
+# Properties
+-include $(VENDOR_XIAOMICUSTOM)/custom-props.mk
 
