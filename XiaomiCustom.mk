@@ -33,6 +33,22 @@ PRODUCT_COPY_FILES += \
     $(VENDOR_XIAOMICUSTOM)/system/vendor/lib64/libmlipay.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmlipay.so \
     $(VENDOR_XIAOMICUSTOM)/system/vendor/lib64/libmlipay@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmlipay@1.1.so 
 
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.spectrum.rc \
+    init.parts.rc
+
+# Spectrum (for initial config)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.spectrum.profile=0
+
+# SELinux
+#BOARD_SEPOLICY_DIRS += $(VENDOR_XIAOMICUSTOM)/sepolicy
+
 # Properties
 -include $(VENDOR_XIAOMICUSTOM)/custom-props.mk
 
