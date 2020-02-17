@@ -16,9 +16,6 @@
 
 VENDOR_XIAOMICUSTOM := vendor/XiaomiCustom
 
-# Inherit MiuiCamera
-$(call inherit-product, vendor/XiaomiCustom/MiuiCamera/MiuiCamera.mk)
-
 # aptX
 PRODUCT_COPY_FILES += \
     $(VENDOR_XIAOMICUSTOM)/system/lib64/libaptXHD_encoder.so:system/lib64/libaptXHD_encoder.so \
@@ -39,7 +36,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # SELinux
 #BOARD_SEPOLICY_DIRS += $(VENDOR_XIAOMICUSTOM)/sepolicy
-
-# Properties
--include $(VENDOR_XIAOMICUSTOM)/custom-props.mk
 
